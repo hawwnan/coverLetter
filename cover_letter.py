@@ -1,6 +1,6 @@
 from jinja2 import Template
 
-def generate_cover_letter(company_name, position, other_info):
+def generate_cover_letter(company_name, position, other_info, Name):
     # Generic part of the cover letter
     template = f"""
     Dear Hiring Manager,
@@ -29,7 +29,7 @@ def generate_cover_letter(company_name, position, other_info):
 
     Sincerely,
     
-    Muhammad Hannan
+    {Name}
     """
 
     return template
@@ -37,6 +37,7 @@ def generate_cover_letter(company_name, position, other_info):
 
 company_name = "ABC Corp"
 position = "Back-End Developer"
+Name = "John Doe"
 other_info = "I am excited about the opportunity to contribute to your innovative projects."
-cover_letter = generate_cover_letter(company_name, position, other_info,)
+cover_letter = generate_cover_letter(company_name, position, other_info,Name)
 print(cover_letter)
